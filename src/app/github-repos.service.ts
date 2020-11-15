@@ -48,7 +48,7 @@ let promise = new Promise((resolve, reject) => {
 });
 return promise;
 
-getRepo (searchName:string){
+getRepo (searchName:string);{
   interface ApiResponse{
     html_url:string,
     name:string,
@@ -71,5 +71,6 @@ getRepo (searchName:string){
       );
   });
   return promise;
+     }
+   }
 }
-}                   
