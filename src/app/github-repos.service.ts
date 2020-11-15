@@ -15,7 +15,4 @@ export class GithubReposService {
 
   constructor(private http:HttpClient) {
 
-    
-
-   }
-}
+  }
