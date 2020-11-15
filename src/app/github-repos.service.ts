@@ -48,29 +48,29 @@ let promise = new Promise((resolve, reject) => {
 });
 return promise;
 
- getRepo(searchName);{
-  interface ApiResponse{
-    html_url:string,
-    name:string,
-    repos_url:string,
-    description:string,
-    forks_count:number,
-  }
-  let promise = new Promise((resolve, reject) => {
-    let apiURL = 'https://api.github.com/users/' + searchName + '/repos?access_token=' + environment.apikey;
-    this.http.get<ApiResponse>(apiURL)
-      .toPromise()
-      .then(
-        res => { // Success
-          this.repo = res;
-          resolve();
-        },
-        ()=>{
-          reject();
-        }
-      );
-  });
-  return promise;
-     }
    }
+   getRepo(searchName:string){
+    interface ApiResponse{
+      html_url:string,
+      name:string,
+      repos_url:string,
+      description:string,
+      forks_count:number,
+    }
+    let promise = new Promise((resolve, reject) => {
+      let apiURL = 'https://api.github.com/users/' + searchName + '/repos?access_token=' + environment.apikey;
+      this.http.get<ApiResponse>(apiURL)
+        .toPromise()
+        .then(
+          res => { // Success
+            this.repo = res;
+            resolve();
+          },
+          (error)=>{
+            reject();
+          }
+        );
+    });
+    return promise;
+  }
 }
