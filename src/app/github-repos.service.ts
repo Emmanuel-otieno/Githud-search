@@ -15,8 +15,8 @@ export class GithubReposService {
 
   constructor(private http:HttpClient) {
 
-    this.user = new User("","","","","","","","",new Date())
-    this.repo = new Repository("","","","","")   
+    this.user = new User()
+    this.repo = new Repository()   
 
    }
 
@@ -48,7 +48,7 @@ let promise = new Promise((resolve, reject) => {
 });
 return promise;
 
-getRepo(searchName:string){
+getRepo (searchName:string){
   interface ApiResponse{
     html_url:string,
     name:string,
