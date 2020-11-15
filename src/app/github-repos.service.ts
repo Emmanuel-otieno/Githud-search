@@ -14,7 +14,8 @@ export class GithubReposService {
   
 
   constructor(private http:HttpClient) {
-
+    this.user = new User("","","","","","","","",new Date())
+    this.repo = new Repository("","","","","")
      
 
    }
