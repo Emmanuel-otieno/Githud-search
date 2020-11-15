@@ -1,1 +1,4 @@
-<p>form works!</p>
+<form class="form-inline active-cyan-4 mt-3 ml-5" #name="ngForm">
+    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Enter Github search name...."  name="searchName" [(ngModel)]="searchName" aria-label="Search">
+    <button class="btn btn-info  btn-sm" name="submit" type="submit"  (click) = "searchUserName()"><b class="fa fa-search" aria-hidden="true"></b> Search</button>
+</form>
