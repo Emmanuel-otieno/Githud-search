@@ -20,7 +20,7 @@ export class GithubReposService {
 
    }
 
-   findUser(searchName:string){
+   getUser(searchName:string){
     interface ApiResponse{
        public_repos:any,
        login:any,

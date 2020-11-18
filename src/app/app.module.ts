@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
     NavbarComponent,
-    FormComponent
+    FormComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

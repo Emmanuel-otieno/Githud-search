@@ -16,7 +16,7 @@ repo:Repository;
   constructor(public githubRepos:GithubReposService) { }
 
     getRepo(searchName){
-      this.githubRepos.findUser(searchName).then(
+      this.githubRepos.getUser(searchName).then(
         (success)=>{
           this.user= this.githubRepos.user;
         },
@@ -31,7 +31,7 @@ repo:Repository;
         (error)=>{
           console.log(error);
         }
-      )
+      );
     }
   
 
