@@ -57,6 +57,7 @@ return promise;
       description:string,
       forks_count:number,
     }
+    
     let promise = new Promise((resolve, reject) => {
       let apiURL = 'https://api.github.com/users/' + searchName + '/repos?access_token=' + environment.apikey;
       this.http.get<ApiResponse>(apiURL)
